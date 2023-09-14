@@ -1,6 +1,6 @@
 package Sept05;
 
-public class Animal {
+public abstract class Animal {
     String name;
     int age;
     boolean gender;
@@ -21,8 +21,10 @@ public class Animal {
         return age;
     }
 
-    public void setAge(int age) {
-        this.age = age;
+    protected void setAge(int age) {
+        if (age > 0 && age < 150) {
+            this.age = age;
+        }
     }
 
     public boolean isGender() {
@@ -37,4 +39,6 @@ public class Animal {
     public String toString() {
         return name + " (" + age + ")";
     }
+
+    public abstract void makeSound();
 }

@@ -11,6 +11,10 @@ public class Dog extends Animal{
         this.breed = breed;
     }
 
+    public void makeSound() {
+        System.out.println("Dog " + name + ": Arf Arf");
+    }
+
     public String getBreed() {
         return breed;
     }
