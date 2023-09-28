@@ -1,12 +1,23 @@
 package Sept05;
 
-public abstract class Animal {
+import java.util.Comparator;
+
+public abstract class Animal implements Comparable<Animal>{
     String name;
     int age;
     boolean gender;
 
-    public Animal(String name) {
+    @Override
+    public int compareTo(Animal other) {
+        return this.name.compareTo(other.name);
+    }
+//    public Animal(String name) {
+//        this.name = name;
+//    }
+
+    public Animal(String name, int age) {
         this.name = name;
+        this.age = age;
     }
 
     public String getName() {
@@ -41,4 +52,18 @@ public abstract class Animal {
     }
 
     public abstract void makeSound();
+
+    public static class AnimalNameComparator implements Comparator<Animal> {
+        @Override
+        public int compare(Animal o1, Animal o2) {
+            return o2.name.compareTo(o1.name);
+        }
+    }
+
+    public static class AnimalAgeComparator implements Comparator<Animal> {
+        @Override
+        public int compare(Animal o1, Animal o2) {
+            return Integer.compare(o1.age, o2.age);
+        }
+    }
 }

@@ -1,13 +1,11 @@
 package Sept05;
 
-public class Dog extends Animal{
+public class Dog extends Mammal{
     String breed;
-    public Dog(String name) {
-        super(name);
-    }
 
-    public Dog(String name, String breed) {
-        super(name);
+
+    public Dog(String name,int age, String breed) {
+        super(name, age);
         this.breed = breed;
     }
 

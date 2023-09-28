@@ -3,12 +3,13 @@ package Aug31;
 import Another.Person;
 import Sept05.Animal;
 import Sept05.Cat;
+import Sept05.Tiger;
 
 public class Main {
     public static void main(String[] args) {
-        Animal vince = new Cat("Vince");
+//        Animal vince = new Tiger("Vince");
 //        vince.setAge(10);
-        System.out.println(vince + " age:" + vince.getAge());
+//        System.out.println(vince + " age:" + vince.getAge());
 //        Person cherry = new Person();
 //        Person person = new Person();
 //        Person leah = new Person("Leah"), cathy = new Person("Catherine", 1);
