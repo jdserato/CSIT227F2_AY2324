@@ -38,6 +38,13 @@ public class Person {
     }
     // SETTER
     public void setAge(int age) {
+        setAge(age);
+        if (age < 0) {
+            throw new IllegalArgumentException("Age cannot be less than zero.");
+        }
+        if (age > 150) {
+            throw new IllegalArgumentException("Age cannot be greater than 150.");
+        }
         this.age = age;
     }
     void eat() {
